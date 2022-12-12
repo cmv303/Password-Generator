@@ -5,7 +5,8 @@ var upperCaseLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "
 var lowerCaseLetters = upperCaseLetters.toString().toLowerCase();
 var generateBtn = document.querySelector("#generate");
 var passwordText = document.querySelector("#password");
-var charLength;
+var charLength = '';
+//boolean true or false if/else
 
 
 function generatePassword () {
@@ -13,56 +14,65 @@ console.log("Button is pressed! If it works, make it return something")
 
 let statusNum = confirm("Would you like to include numbers in your password?");
 if (statusNum == true) {
-  console.log("You pressed ok!")
+  alert("great, numbers will be included")
 }
 else {
-  console.log("You pressed no!")
+  alert("ok, no numbers will be included")
 };
 
 let statusSymb = confirm("Would you like to include symbols in your password?");
 if (statusSymb == true) {
-  console.log("You pressed ok!")
+  alert("great, symbols will be included")
 }
 else {
-  console.log("You pressed no!")
+ alert("ok, no symbols will be included")
 
 };
 
 let statusLCL = confirm("Would you like to include lowercase letters in your password?");
 if (statusLCL == true) {
-  console.log("You pressed ok!")
+  alert("great, lowercase will be included")
 }
 else {
-  console.log("You pressed no!")
+  alert("ok, no lowercase will be included")
 
 };
 
-let statusUCL = confirm("Would you like to include uppercase letter in your password?");
+let statusUCL = confirm("Would you like to include uppercase letters in your password?");
 if (statusUCL == true) {
-  console.log("You pressed ok!")
+  alert("great, uppercase will be included")
 }
 else {
-  console.log("You pressed no!")
+  alert("ok, no uppercase will be included")
 
 };
 
 prompt("Choose a password length between 8 and 128 characters");
-if (charLength < 8 || charLength > 128) { //NOT WORKING
-  console.log("correct value!")
+if (charLength > 8 || charLength < 128) { //NOT WORKING
+  alert("on it!")
 }
 else {
-  console.log("incorrect value")
+  alert("Please try again! Must be between 8-128 characters in lenght")
 
-};
+}; //not working
 
-return "Here's your password"
+if (!statusLCL, !statusNum, !statusSymb, !statusUCL ==true) {
+  alert("one or more criteria must be defined")
+}
+else {};
+
+
+
+return generatePassword;
+
+
 
 }
 
 
 // Write password to the #password input
 
-function writePassword(value) {
+function writePassword() {
   var password = generatePassword();
 
   passwordText.value = password;
