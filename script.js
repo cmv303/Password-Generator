@@ -1,17 +1,19 @@
-// Assignment Code
-var numbers = [1,2,3,4,5,6,7,8,9,0];
-var symbols = ["!", "#", "$", "%", "&", "*", "+", "<", "=", ">", "?", "@"];
-var upperCaseLetters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",];
+//Variables
+var numbers = 1234567890;
+var symbols = "!#$%&*+<=>?@;"
+var upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ;"
 var lowerCaseLetters = upperCaseLetters.toString().toLowerCase();
 var generateBtn = document.querySelector("#generate");
 var passwordText = document.querySelector("#password");
-var charLength = '';
-//boolean true or false if/else
+var charLength = "";
+var passCombos = "0";
 
 
 function generatePassword () {
-console.log("Button is pressed! If it works, make it return something")
+console.log("Button is pressed! If it works, make it return something")//take out at end
 
+
+//CRITERIA
 let statusNum = confirm("Would you like to include numbers in your password?");
 if (statusNum == true) {
   alert("great, numbers will be included")
@@ -46,15 +48,16 @@ else {
   alert("ok, no uppercase will be included")
 
 };
-
+//! NOT WORKING
 prompt("Choose a password length between 8 and 128 characters");
-if (charLength > 8 || charLength < 128) { //NOT WORKING
+if (charLength > 8 || charLength < 128) { 
   alert("on it!")
 }
 else {
   alert("Please try again! Must be between 8-128 characters in lenght")
 
-}; //not working
+}; 
+//!
 
 if (!statusLCL, !statusNum, !statusSymb, !statusUCL ==true) {
   alert("one or more criteria must be defined")
@@ -62,10 +65,15 @@ if (!statusLCL, !statusNum, !statusSymb, !statusUCL ==true) {
 else {};
 
 
+//concatenating all variables
+let passCombos = statusNum.length + Number(statusSymb.length) + Number(statusLCL.length) + Number(statusUCL.length) + Number(charLength.length)
+console.log(typeof passCombos); //number
+console.log(passCombos); //! nan???
 
 return generatePassword;
 
 
+//TODO WHERE DOES MATH.FLOOR(MATH.RANDOM()) GO???
 
 }
 
@@ -73,7 +81,7 @@ return generatePassword;
 // Write password to the #password input
 
 function writePassword() {
-  var password = generatePassword();
+  var password = generatePassword(passCombos);
 
   passwordText.value = password;
 }
