@@ -5,8 +5,8 @@ var upperCaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ;"
 var lowerCaseLetters = upperCaseLetters.toString().toLowerCase();
 var generateBtn = document.querySelector("#generate");
 var charLength = 0;
-var passCombos = "";
-var comboStrings= 0;
+var passCombos = ""; //all possible password combinations
+var comboStrings= 0; //concatenated strings FOR password combos
 
 function generatePassword () {
 console.log("Button is pressed! If it works, make it return something")//take out at end
@@ -16,19 +16,18 @@ console.log("Button is pressed! If it works, make it return something")//take ou
 let statusNum = confirm("Would you like to include numbers in your password?");
 if (statusNum == true) {
   alert("great, numbers will be included")
-  // comboStrings.concat(statusNum);
-  // console.log(comboStrings);
+
 }
 else {
   alert("ok, no numbers will be included")
 };
 
 
+
 let statusSymb = confirm("Would you like to include symbols in your password?");
 if (statusSymb == true) {
   alert("great, symbols will be included")
-  // comboStrings.concat(statusSymb);
-  // console.log(comboStrings);
+
 }
 else {
  alert("ok, no symbols will be included")
@@ -39,8 +38,8 @@ else {
 let statusLCL = confirm("Would you like to include lowercase letters in your password?");
 if (statusLCL == true) {
   alert("great, lowercase will be included")
-//   comboStrings.concat(statusUCL);
-//   console.log(comboStrings);
+ 
+
 }
 else {
   alert("ok, no lowercase will be included")
@@ -51,8 +50,8 @@ else {
 let statusUCL = confirm("Would you like to include uppercase letters in your password?");
 if (statusUCL == true) {
   alert("great, uppercase will be included")
-  // comboStrings.concat(statusUCL);
-  // console.log(comboStrings);
+ 
+
 }
 else {
   alert("ok, no uppercase will be included")
@@ -63,8 +62,8 @@ else {
 let charLength = prompt("Choose a password length between 8 and 128 characters");
 if (charLength >= 8 && charLength <= 128) {
   alert("Generating your password...")
-  // comboStrings.concat(charLength);
-  // console.log(comboStrings);
+ 
+
 }
 else {
   alert("Please try again! Must be between 8-128 characters in lenght")
@@ -75,9 +74,9 @@ if (!statusLCL, !statusNum, !statusSymb, !statusUCL == true) {
 }
 else {};
 
-// for (var i=0; i < Number.charLength; i + 1) {
-//   password +=comboStrings[passCombos(comboStrings.length)]
-// }
+
+//! do not understand how to do concatinations. I know that they are not turning  up as arrays, and therefore, when i try to .concat it tells me it is not a function, as the status... is showing as an object or undefined.
+
 
 function psPleaseWork() {
   let password = ""
@@ -93,16 +92,13 @@ return psPleaseWork()
 
 }
 
-
-function writePassword() {
+// * This works!!
+function writePassword(generateBtn) {
+  generateBtn.preventDefault();
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
-
-
-
-// Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 
