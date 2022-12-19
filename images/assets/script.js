@@ -61,7 +61,7 @@ else {
 if (!statusLCL, !statusNum, !statusSymb, !statusUCL == true ) {
   alert("one or more criteria must be defined");
 }
-else {}; //! DOES THIS NEED TO START WITH A LET STATEMENT?? see red note below to see if these are related
+else {}; //! DOES THIS NEED TO START WITH A LET STATEMENT?? see red note below to see if these are related. ALSO, REMEMBER THAT IMAGE LINK IS BROKEN IN README. WHY?
 
 
 function psPleaseWork() {
