@@ -60,8 +60,8 @@ else {
 
 if (!statusLCL, !statusNum, !statusSymb, !statusUCL == true ) {
   alert("one or more criteria must be defined");
+  return;
 }
-else {}; //! DOES THIS NEED TO START WITH A LET STATEMENT?? see red note below to see if these are related. ALSO, REMEMBER THAT IMAGE LINK IS BROKEN IN README. WHY?
 
 
 function psPleaseWork() {
@@ -82,10 +82,13 @@ return psPleaseWork()
 
 function writePassword(generateBtn) {
   generateBtn.preventDefault();
-  var password = generatePassword();
+  var password = generatePassword(); 
+  console.log(password);
+  if (password === undefined) {
+    password = ""
+  }
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
 generateBtn.addEventListener("click", writePassword);
 
-//! THIS STILL RETURNS A PASSWORD, EVEN IF NO CRITERIA IS DEFINED. WHY??
