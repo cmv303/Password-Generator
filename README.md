@@ -18,8 +18,9 @@ a new password that's more to your liking.
 https://cmv303.github.io/Password-Generator/
 
 
-## Demo/Screenshot of Deployed Page
-![Alt text "image of deployed page for password generator"](images/Screenshot%202022-12-16%20at%202.20.30%20PM.png)
+## Screenshots
+![Screen Shot 2023-06-29 at 11 47 55 AM](https://github.com/cmv303/Password-Generator/assets/115678318/28f338d2-3d6a-4bcf-9930-79d0ed22e3ef)
+![Screen Shot 2023-06-29 at 11 47 25 AM](https://github.com/cmv303/Password-Generator/assets/115678318/04b976e8-9cd9-464f-ae75-04ca9812a87a)
 
 
 ## License
